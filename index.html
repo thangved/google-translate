@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Google dịch</title>
+		<link
+			rel="shortcut icon"
+			href="./assets/img/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="left">
+				<div class="icon-button">
+					<svg
+						focusable="false"
+						viewBox="0 0 24 24"
+						style="width: 24px; height: 24px"
+					>
+						<path
+							d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+						></path>
+					</svg>
+				</div>
+
+				<div class="header-logo">
+					<img src="./assets/img/googlelogo_clr_74x24px.svg" alt="" />
+					<span>Dịch</span>
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="icon-button">
+					<svg
+						class="gb_Ue"
+						focusable="false"
+						viewBox="0 0 24 24"
+						style="width: 24px; height: 24px"
+					>
+						<path
+							d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
+						></path>
+					</svg>
+				</div>
+
+				<div class="icon-button">
+					<img src="./assets/img/unnamed.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container">
+				<div class="tabs">
+					<div class="tab-button active">
+						<span class="material-icons-sharp">translate</span>
+						<span>Văn bản</span>
+					</div>
+
+					<div class="tab-button">
+						<span class="material-icons-sharp">
+							insert_drive_file
+						</span>
+						<span>Tài liệu</span>
+					</div>
+
+					<div class="tab-button">
+						<span class="material-icons-sharp">language</span>
+						<span>Trang web</span>
+					</div>
+				</div>
+
+				<div class="translate-box">
+					<div class="tabs">
+						<div class="tab-items">
+							<div class="tab-item active">
+								Phát hiện ngôn ngữ
+							</div>
+							<div class="tab-item">Việt</div>
+							<div class="tab-item">Anh</div>
+							<div class="tab-item">Pháp</div>
+							<div class="icon-button sm">
+								<span class="material-icons-sharp">
+									expand_more
+								</span>
+							</div>
+						</div>
+
+						<div class="icon-button sm">
+							<span class="material-icons-sharp">
+								swap_horiz
+							</span>
+						</div>
+
+						<div class="tab-items">
+							<div class="tab-item">Anh</div>
+							<div class="tab-item active">Việt</div>
+							<div class="tab-item">Trung (giản thể)</div>
+							<div class="icon-button sm">
+								<span class="material-icons-sharp">
+									expand_more
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="main-container">
+						<div class="main-container-col">
+							<div class="text-field">
+								<textarea></textarea>
+							</div>
+
+							<div class="translate-stat">
+								<div class="stat-left">
+									<span class="material-icons-sharp">
+										mic
+									</span>
+								</div>
+
+								<div class="stat-right">
+									<span>0/5.000</span>
+									<span class="material-icons-sharp">
+										edit
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="main-container-col">
+							<div class="text-field">
+								<textarea
+									placeholder="Bản dịch"
+									readonly
+								></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="send-feedback">
+					<a href="#">Gửi phản hồi</a>
+				</div>
+
+				<div class="tools">
+					<div class="tool">
+						<div class="icon-button lg">
+							<span class="material-icons-sharp">history</span>
+						</div>
+						<span>Các bản dịch đã thực hiện</span>
+					</div>
+
+					<div class="tool">
+						<div class="icon-button lg">
+							<span class="material-icons-sharp">star</span>
+						</div>
+						<span>Đã lưu</span>
+					</div>
+
+					<div class="tool">
+						<div class="icon-button lg">
+							<span class="material-icons-sharp">
+								people_outline
+							</span>
+						</div>
+						<span>Đóng góp</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

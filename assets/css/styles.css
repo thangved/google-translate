@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.header {
+	width: 100%;
+	height: 64px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #ddd;
+	padding: 8px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	z-index: 100;
+}
+
+.header .left,
+.header .right {
+	display: flex;
+	align-items: center;
+}
+
+.icon-button {
+	width: 48px;
+	height: 48px;
+
+	margin: 0 4px;
+
+	border-radius: 48px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+
+	color: #5f6368;
+	padding: 4px;
+	user-select: none;
+}
+
+.icon-button.sm {
+	width: 40px;
+	height: 40px;
+}
+
+.icon-button.lg {
+	width: 72px;
+	height: 72px;
+	border: 1px solid #ddd;
+}
+
+.icon-button.lg:hover {
+	background: transparent;
+}
+
+.icon-button.lg .material-icons-sharp {
+	font-size: 32px;
+	margin: 0;
+}
+
+.icon-button img {
+	border-radius: 100px;
+}
+
+.icon-button:hover {
+	background-color: #3c404314;
+}
+
+.header-logo {
+	display: flex;
+	align-items: center;
+	font-size: 22px;
+	color: #5f6368;
+	user-select: none;
+}
+
+.header-logo span {
+	margin-left: 4px;
+}
+
+.content {
+	width: 100%;
+	position: relative;
+	padding-top: 64px;
+}
+
+.content::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: calc(97px + 64px);
+	top: 0;
+	left: 0;
+	background: #fafafa;
+	border-bottom: 1px solid #ddd;
+}
+
+.container {
+	width: 1280px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.tabs {
+	height: 68px;
+	display: flex;
+	align-items: center;
+}
+
+.tab-button {
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #ddd;
+	padding: 0 15px 0 11px;
+	border-radius: 4px;
+	color: #1967d2;
+	cursor: pointer;
+	user-select: none;
+	font-weight: 500;
+}
+
+.tab-button.active {
+	background: #1967d220;
+}
+
+.tab-button:hover {
+	background: #1967d210;
+}
+
+.tab-button span {
+	font-size: 14px;
+}
+
+.tab-button .material-icons-sharp {
+	margin-right: 8px;
+}
+
+.material-icons-sharp {
+	font-size: 20px;
+	font-family: 'Material Icons';
+}
+
+.tab-button + .tab-button {
+	margin-left: 8px;
+}
+
+.translate-box {
+	width: 100%;
+	height: 219px;
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 1px 4px 0 rgb(0 0 0 / 37%);
+	display: flex;
+	flex-direction: column;
+}
+
+.tab-items {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+
+.tab-item {
+	height: 48px;
+	line-height: 48px;
+	padding: 0 16px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #666;
+	border-bottom: 2px solid transparent;
+	user-select: none;
+	font-weight: 500;
+}
+
+.tab-item:hover {
+	background: #00000010;
+}
+
+.tab-item.active {
+	color: #1967d2;
+	border-color: #1967d2;
+}
+
+.tab-item.active:hover {
+	background-color: #1967d210;
+}
+
+.translate-box .tabs {
+	height: 48px;
+	border-bottom: 1px solid #ddd;
+}
+
+.main-container {
+	display: flex;
+	flex: 1;
+}
+
+.main-container-col {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-container-col + .main-container-col {
+	border-left: 1px solid #ddd;
+}
+
+.text-field {
+	width: 100%;
+	height: 114px;
+	padding: 20px 58px 20px 24px;
+}
+
+.text-field textarea {
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.translate-stat {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	padding: 0 11px;
+}
+
+.stat-left {
+	padding: 0 10px;
+	color: #666;
+}
+
+.stat-right {
+	padding: 0 10px;
+	color: #666;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.stat-right span {
+	padding: 0 10px;
+}
+
+.send-feedback {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+.send-feedback a {
+	text-decoration: none;
+	font-style: italic;
+	color: #666;
+	font-size: 11px;
+	margin-top: 8px;
+}
+
+.send-feedback a:hover {
+	text-decoration: underline;
+}
+
+.tools {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 72px;
+}
+
+.tool {
+	font-size: 14px;
+	color: #000000aa;
+	cursor: pointer;
+	margin: 0 31px;
+}
+
+.tool span {
+	display: block;
+	margin-top: 8px;
+	font-weight: 500;
+	text-align: center;
+}
+
