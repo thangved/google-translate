@@ -330,11 +330,33 @@ body {
 	.translate-box {
 		border-radius: 0;
 	}
+
+	.tabs {
+		padding: 0 12px;
+		height: 56px;
+	}
+
+	.translate-box .tabs {
+		padding: 0;
+	}
 }
 @media (max-width: 912px) {
+	body {
+		background: #fafafa;
+	}
+
 	:not(.active).tab-item {
 		display: none;
 	}
+
+	.tab-button.sm-0 {
+		display: none;
+	}
+
+	.translate-box {
+		height: 183px;
+	}
+
 	.translate-box .tab-items .icon-button {
 		display: none;
 	}
@@ -352,6 +374,29 @@ body {
 	.translate-box .main-container-col:nth-child(2) {
 		display: none;
 	}
+
+	.text-field {
+		height: 81px;
+	}
+
+	.tools {
+		margin-top: 60px;
+	}
+
+	.tool {
+		margin: 0 18px;
+	}
+
+	.icon-button.lg {
+		width: 62px;
+		height: 62px;
+		background: #fff;
+	}
+
+	.icon-button.lg:hover {
+		background: #fff;
+	}
+
 	.send-feedback {
 		padding: 0 10px;
 	}
