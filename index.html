@@ -53,11 +53,18 @@
 							/>
 							<span>Dịch</span>
 						</div>
-						<p>Giới thiệu về Google Dịch</p>
-						<p>Quyền riêng tư & Điều khoản</p>
-						<p>Trợ giúp</p>
-						<p>Gửi ý kiến phản hồi</p>
-						<p>Giới thiệu về Google</p>
+						<a class="sidebar-item" href="#"
+							>Giới thiệu về Google Dịch</a
+						>
+						<hr />
+						<a class="sidebar-item" href="#"
+							>Quyền riêng tư & Điều khoản</a
+						>
+						<a class="sidebar-item" href="#">Trợ giúp</a>
+						<a class="sidebar-item" href="#">Gửi ý kiến phản hồi</a>
+						<a class="sidebar-item" href="#"
+							>Giới thiệu về Google</a
+						>
 					</div>
 				</div>
 			</div>
@@ -77,35 +84,67 @@
 				</div>
 				<div class="in-icon-button hidden" id="app-modal">
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 					<div class="app-icon">
-						<img src="./assets/img/Gmail-Logo.jpg" alt="" />
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
+						<span>Gmail</span>
+					</div>
+					<div class="app-icon">
+						<img src="./assets/img/Gmail_Logo_256px.png" alt="" />
 						<span>Gmail</span>
 					</div>
 				</div>
@@ -114,7 +153,7 @@
 				</div>
 				<div class="account-modal hidden" id="acc">
 					<div class="para">
-						<p>Tai khoan nay duoc quan ly boi...</p>
+						<p>Tài khoản này được quản lý bởi student.ctu.edu.vn</p>
 					</div>
 					<div class="now-account">
 						<div class="in-now-account">
@@ -130,8 +169,8 @@
 						</div>
 
 						<div class="now-account-info">
-							<h3>Kim Minh Thắng</h3>
-							<h4>thangved02@gmail.com</h4>
+							<h3>B2007210 Kim Minh Thang</h3>
+							<h4>thangb2007210@student.ctu.edu.vn</h4>
 
 							<button>Quản lý Tài khoản Google của bạn</button>
 						</div>
@@ -144,8 +183,8 @@
 							</div>
 
 							<div class="account-list-item-text">
-								<h3>B2007210 Kim Minh Thang</h3>
-								<h4>thangb2007210@student.ctu.edu.vn</h4>
+								<h3>Kim Minh Thắng</h3>
+								<h4>thangved02@gmail.com</h4>
 							</div>
 						</div>
 
@@ -171,7 +210,9 @@
 						<div class="text">Đăng xuất</div>
 					</div>
 					<div class="para">
-						<p>Chính sách quyền riêng tư • Điều khoản dịch vụ</p>
+						<p>Chính sách quyền riêng tư</p>
+						•
+						<p>Điều khoản dịch vụ</p>
 					</div>
 				</div>
 			</div>
@@ -240,7 +281,10 @@
 
 						<div class="language-box hidden" id="languages-box">
 							<div class="search">
-								<div class="icon-button">
+								<div
+									class="icon-button"
+									onclick="closeSourceLanguageBox()"
+								>
 									<span class="material-symbols-rounded">
 										arrow_back
 									</span>
@@ -273,7 +317,10 @@
 							id="languages-box-target"
 						>
 							<div class="search">
-								<div class="icon-button">
+								<div
+									class="icon-button"
+									onclick="closeTargetLanguageBox()"
+								>
 									<span class="material-symbols-rounded">
 										arrow_back
 									</span>
@@ -295,7 +342,10 @@
 					<div class="main-container">
 						<div class="main-container-col">
 							<div class="text-field">
-								<textarea autofocus></textarea>
+								<textarea
+									autofocus
+									id="language-source"
+								></textarea>
 							</div>
 
 							<div class="translate-stat">

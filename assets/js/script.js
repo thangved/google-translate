@@ -26,7 +26,7 @@ const avatar = document.getElementById("img");
 const account = document.getElementById("acc");
 avatar.addEventListener("click", (e) => {
 	e.stopPropagation();
-	account.classList.remove("hidden");
+	account.classList.toggle("hidden");
 });
 window.addEventListener("click", (e) => {
 	account.classList.add("hidden");
@@ -83,18 +83,30 @@ function closeTargetLanguageBox() {
 	languageTargetBox.classList.add("hidden");
 }
 
+// Source
 toggleLanguageSourceBox.addEventListener("click", (e) => {
 	e.stopPropagation();
 	closeTargetLanguageBox();
 	toggleSourceLanguageBox();
 });
 
+document.getElementById("source-language").addEventListener("click", (e) => {
+	e.stopPropagation();
+	toggleSourceLanguageBox();
+});
+
 languageSourceBox.addEventListener("click", (e) => e.stopPropagation());
 window.addEventListener("click", closeSourceLanguageBox);
 
+// Target
 toggleLanguageTargetBox.addEventListener("click", (e) => {
 	e.stopPropagation();
 	closeSourceLanguageBox();
+	toggleTargetLanguageBox();
+});
+
+document.getElementById("target-language").addEventListener("click", (e) => {
+	e.stopPropagation();
 	toggleTargetLanguageBox();
 });
 
