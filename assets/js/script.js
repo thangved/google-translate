@@ -167,7 +167,7 @@ document.getElementById("swap-lang").addEventListener("click", () => {
 	const newSource = targetLanguage.get();
 	const newTarget = sourceLanguage.get();
 
-	if (newTarget.code === "auto") return;
+	if (!newTarget.code) return;
 
 	sourceLanguage.set(newSource);
 	targetLanguage.set(newTarget);
