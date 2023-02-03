@@ -120,7 +120,6 @@ window.addEventListener("click", closeTargetLanguageBox);
 const sourceLanguage = (() => {
 	let lang = {
 		name: "Phát hiện ngôn ngữ",
-		code: "auto",
 	};
 
 	return {
@@ -174,9 +173,32 @@ document.getElementById("swap-lang").addEventListener("click", () => {
 	targetLanguage.set(newTarget);
 });
 
-document
-	.getElementById("source-text")
-	.addEventListener("keyup", async (event) => {
-		const targetText = document.getElementById("target-text");
-		targetText.value = event.target.value;
-	});
+let timeout;
+
+document.getElementById("source-text").addEventListener("keyup", (event) => {
+	const targetText = document.getElementById("target-text");
+	document.getElementById("count-text").innerText = event.target.value.length;
+
+	clearTimeout(timeout);
+
+	timeout = setTimeout(async () => {
+		const res = await axios.post(
+			"https://google-translate1.p.rapidapi.com/language/translate/v2",
+			{
+				q: event.target.value,
+				source: sourceLanguage.get().code,
+				target: targetLanguage.get().code,
+			},
+			{
+				headers: {
+					"content-type": "application/x-www-form-urlencoded",
+					"Accept-Encoding": "application/gzip",
+					"X-RapidAPI-Key": "", // replate your api key
+					"X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+				},
+			}
+		);
+
+		targetText.value = res.data.data.translations[0].translatedText;
+	}, 300);
+});
