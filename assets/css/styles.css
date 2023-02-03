@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,7 +7,7 @@
 }
 
 html {
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -103,7 +104,7 @@ body {
 }
 
 .content::before {
-	content: '';
+	content: "";
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -125,6 +126,7 @@ body {
 	height: 68px;
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 
 .tab-button {
@@ -163,7 +165,7 @@ body {
 
 .material-icons-sharp {
 	font-size: 20px;
-	font-family: 'Material Icons';
+	font-family: "Material Icons";
 }
 
 .tab-button + .tab-button {
@@ -175,7 +177,7 @@ body {
 	height: 219px;
 	background: #fff;
 	border-radius: 8px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	box-shadow: 0 1px 4px 0 rgb(0 0 0 / 37%);
 	display: flex;
 	flex-direction: column;
@@ -202,6 +204,24 @@ body {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.in-header-logo {
+	box-shadow: 0 0 15px #ddd;
+	font-size: 15px;
+	width: 250px;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	padding: 5px;
+	transition: 0.5s;
+}
+
+.in-header-logo p {
+	margin: 20px;
 }
 
 .tab-item:hover {
@@ -251,7 +271,7 @@ body {
 	outline: none;
 	resize: none;
 	font-size: 24px;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 .translate-stat {
@@ -293,12 +313,43 @@ body {
 	justify-content: right;
 }
 
+.app-icon {
+	width: 110px;
+	height: auto;
+	padding: 10px;
+}
+
+.app-icon img {
+	width: 100%;
+}
+
+.in-icon-button {
+	position: fixed;
+	right: 10px;
+	top: 80px;
+	background: #fff;
+	box-shadow: 0 0 10px #00000030;
+	width: 350px;
+	padding: 10px;
+	height: 400px;
+	z-index: 100;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	border-radius: 10px;
+}
+
 .send-feedback a {
 	text-decoration: none;
 	font-style: italic;
 	color: #666;
 	font-size: 11px;
 	margin-top: 8px;
+}
+
+.app-icon span {
+	text-align: center;
+	display: block;
 }
 
 .send-feedback a:hover {
@@ -340,6 +391,7 @@ body {
 		padding: 0;
 	}
 }
+
 @media (max-width: 912px) {
 	body {
 		background: #fafafa;
@@ -402,3 +454,219 @@ body {
 	}
 }
 
+.account-modal {
+	border-radius: 20px;
+	background: rgb(241, 245, 249);
+	box-shadow: 0 0 30px #00000030;
+	position: fixed;
+	width: 400px;
+	right: 10px;
+	top: 80px;
+	padding: 10px;
+}
+
+.para {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	font-size: small;
+}
+
+.now-account {
+	background: #fff;
+	border-radius: 15px 15px 5px 5px;
+	padding: 10px;
+	display: flex;
+}
+
+.now-account-info {
+	flex: 1;
+}
+
+.now-account-info {
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.now-account-info h3 {
+	font-weight: normal;
+	font-size: medium;
+}
+
+.now-account-info h4 {
+	font-weight: normal;
+	font-size: small;
+}
+
+.now-account-info button {
+	display: block;
+	font-size: medium;
+	margin-top: 20px;
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.now-account-info button:hover {
+	background: #fafafa;
+}
+
+.hidden {
+	display: none;
+}
+
+.avt {
+	width: 70px;
+	height: 70px;
+	position: relative;
+}
+
+.avt img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+
+.animation {
+	transform: translateX(-110%);
+}
+
+.avt .badge {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account-list {
+	background: #fff;
+	border-radius: 5px 5px 20px 20px;
+	margin-top: 2px;
+}
+
+.account-list-item {
+	display: flex;
+	padding: 10px 35px;
+	align-items: center;
+}
+
+.account-list-item .avatar img {
+	border-radius: 100px;
+}
+
+.account-list-item .account-list-item-text {
+	padding-left: 30px;
+}
+
+.language-box {
+	width: 100%;
+	box-shadow: 0 15px 15px rgb(224, 217, 217);
+	border-radius: 0 0 10px 10px;
+	position: absolute;
+	top: 100%;
+	background: #fff;
+	left: 0;
+	border-top: 1px solid #ddd;
+}
+
+.account-list-item .account-list-item-text h3 {
+	font-weight: normal;
+	font-size: medium;
+}
+
+.search {
+	border-bottom: 1px solid #ddd;
+	padding: 5px;
+	display: flex;
+}
+
+.language-list {
+	padding: 20px;
+}
+
+.language-list ul li:hover {
+	background: #fafafa;
+}
+
+.language-list ul {
+	column-count: 6;
+}
+
+.language-list ul li {
+	list-style: none;
+	padding: 7px;
+	cursor: pointer;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.language-list ul li span {
+	font-size: 15px;
+	margin-left: 4px;
+}
+
+.language-list ul li::before {
+	content: "";
+	display: inline-block;
+	width: 30px;
+	font-family: "Material Icons";
+	-webkit-font-feature-settings: "liga";
+}
+
+.language-list ul li.active::before {
+	content: "check";
+}
+
+.dropdown-btn {
+	transition: 0.4s ease;
+}
+
+.dropdown-btn.active {
+	transform: rotate(180deg);
+}
+
+.language-list ul li.active {
+	color: #1967d2;
+	background: #1967d210;
+	font-weight: bold;
+}
+
+.search input {
+	border: none;
+	outline: none;
+	flex: 1;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.account-list-item .account-list-item-text h4 {
+	font-weight: normal;
+	font-size: small;
+}
+
+.logout-btn {
+	display: flex;
+	padding: 10px 30px;
+	cursor: pointer;
+	align-items: center;
+	margin: 0 -10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.logout-btn:hover {
+	background: #0033ff10;
+}
+
+.logout-btn .text {
+	padding-left: 35px;
+}
