@@ -200,11 +200,11 @@
 				<div class="translate-box">
 					<div class="tabs">
 						<div class="tab-items">
-							<div class="tab-item active">
+							<div class="tab-item active" id="source-language">
 								Phát hiện ngôn ngữ
 							</div>
-							<div class="tab-item">Việt</div>
 							<div class="tab-item">Anh</div>
+							<div class="tab-item">Việt</div>
 							<div class="tab-item">Pháp</div>
 							<div
 								class="icon-button sm dropdown-btn"
@@ -216,15 +216,17 @@
 							</div>
 						</div>
 
-						<div class="icon-button sm">
+						<div class="icon-button sm" id="swap-lang">
 							<span class="material-icons-sharp">
 								swap_horiz
 							</span>
 						</div>
 
 						<div class="tab-items">
+							<div class="tab-item active" id="target-language">
+								Việt
+							</div>
 							<div class="tab-item">Anh</div>
-							<div class="tab-item active">Việt</div>
 							<div class="tab-item">Trung (giản thể)</div>
 							<div
 								class="icon-button sm dropdown-btn"
@@ -253,7 +255,10 @@
 
 							<div class="language-list">
 								<ul id="language-list">
-									<li class="active">
+									<li
+										class="source-lang active"
+										onclick="sourceLanguage.set({nativeName: 'Phát hiện ngôn ngữ', alpha2Code: 'AU', alpha3Code: 'AUT'})"
+									>
 										Phát hiện ngôn ngữ
 										<span class="material-symbols-sharp">
 											auto_awesome
