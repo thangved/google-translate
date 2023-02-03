@@ -34,26 +34,29 @@ window.addEventListener("click", (e) => {
 account.addEventListener("click", (e) => e.stopPropagation());
 
 axios
-	.get(
-		"https://restcountries.com/v2/all?fields=nativeName,alpha2Code,alpha3Code"
-	)
+	.get("https://unpkg.com/countries-list@2.6.1/dist/languages.json")
 	.then((res) => {
-		for (const lang of res.data) {
+		const languageList = Object.keys(res.data).map((key) => ({
+			...res.data[key],
+			code: key,
+		}));
+
+		for (const lang of languageList) {
 			document.getElementById(
 				"language-list"
 			).innerHTML += `<li class="source-lang" data-value="${
-				lang.alpha2Code
+				lang.code
 			}" onclick='sourceLanguage.set(${JSON.stringify(lang)})'>${
-				lang.nativeName
+				lang.name
 			}</li>`;
 
 			document.getElementById(
 				"language-list-target"
 			).innerHTML += `<li class="target-lang" data-value="${
-				lang.alpha2Code
+				lang.code
 			}" onclick='targetLanguage.set(${JSON.stringify(lang)})' class="${
-				lang.alpha3Code === "VNM" ? "active" : ""
-			}">${lang.nativeName}</li>`;
+				lang.code === "vi" ? "active" : ""
+			}">${lang.name}</li>`;
 		}
 	});
 
@@ -116,9 +119,8 @@ window.addEventListener("click", closeTargetLanguageBox);
 
 const sourceLanguage = (() => {
 	let lang = {
-		nativeName: "Phát hiện ngôn ngữ",
-		alpha2Code: "AU",
-		alpha3Code: "AUT",
+		name: "Phát hiện ngôn ngữ",
+		code: "auto",
 	};
 
 	return {
@@ -127,22 +129,21 @@ const sourceLanguage = (() => {
 		},
 		set(newLang) {
 			lang = newLang;
-			document.getElementById("source-language").innerText =
-				lang.nativeName;
+			document.getElementById("source-language").innerText = lang.name;
 
 			document
 				.querySelector(".source-lang.active")
 				?.classList.remove("active");
 
 			document
-				.querySelector(`.source-lang[data-value=${lang.alpha2Code}]`)
+				.querySelector(`.source-lang[data-value=${lang.code}]`)
 				.classList.add("active");
 		},
 	};
 })();
 
 const targetLanguage = (() => {
-	let lang = { nativeName: "Việt Nam", alpha2Code: "VN", alpha3Code: "VNM" };
+	let lang = { name: "Vietnamese", code: "vi" };
 
 	return {
 		get() {
@@ -150,15 +151,14 @@ const targetLanguage = (() => {
 		},
 		set(newLang) {
 			lang = newLang;
-			document.getElementById("target-language").innerText =
-				lang.nativeName;
+			document.getElementById("target-language").innerText = lang.name;
 
 			document
 				.querySelector(".target-lang.active")
 				?.classList.remove("active");
 
 			document
-				.querySelector(`.target-lang[data-value=${lang.alpha2Code}]`)
+				.querySelector(`.target-lang[data-value=${lang.code}]`)
 				.classList.add("active");
 		},
 	};
@@ -168,8 +168,15 @@ document.getElementById("swap-lang").addEventListener("click", () => {
 	const newSource = targetLanguage.get();
 	const newTarget = sourceLanguage.get();
 
-	if (newTarget.alpha2Code === "AU") return;
+	if (newTarget.code === "auto") return;
 
 	sourceLanguage.set(newSource);
 	targetLanguage.set(newTarget);
 });
+
+document
+	.getElementById("source-text")
+	.addEventListener("keyup", async (event) => {
+		const targetText = document.getElementById("target-text");
+		targetText.value = event.target.value;
+	});
